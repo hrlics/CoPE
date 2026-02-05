@@ -36,12 +36,12 @@ With a simple yet effective soft clipping strategy, CoPE
 
 
 ## 🛠️ Requirements
-1. Clone this repository and install `transformers==4.45.2` from source
+1. Clone this repository and install `transformers==4.50.0` from source
 ```
-git clone https://github.com/hrlics/HoPE.git
-cd HoPE
-wget https://github.com/huggingface/transformers/archive/refs/tags/v4.45.2.tar.gz
-tar -xzf v4.45.2.tar.gz
+git clone https://github.com/hrlics/CoPE.git
+cd CoPE
+wget https://github.com/huggingface/transformers/archive/refs/tags/v4.50.0.tar.gz
+tar -xzf v4.50.0.tar.gz
 ```
 
 2. Install required packages
