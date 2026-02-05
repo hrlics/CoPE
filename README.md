@@ -32,8 +32,8 @@ With a simple yet effective soft clipping strategy, CoPE
 
 2️⃣ **Refines Long-range Semantic Signals** by alleviating the secret *long-term decay of semantic attention* introduced by RoPE.
 
-3️⃣ **Prevents Spectral Leakage** induced by hard freqeuncy truncation, which will lead to ringing artifacts in the time-domain of attention scores and introduces spurious correlations
-.
+3️⃣ **Prevents Spectral Leakage** induced by hard frequency truncation, which otherwise leads to long-range oscillatory ringing in the attention scores across relative token distances and introduces spurious correlations.
+
 
 ## 🛠️ Requirements
 1. Clone this repository and install `transformers==4.45.2` from source
