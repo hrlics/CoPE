@@ -22,7 +22,7 @@
 
 <div align="center">
   <img src="assets/design.png" alt="Design" width="50%" style="display:inline-block; margin-right:10px;"/>
-  <img src="assets/performance.png" alt="Performance" width="36.5%" style="display:inline-block;"/>
+  <img src="assets/performance.png" alt="Performance" width="34%" style="display:inline-block;"/>
 </div>
 
 
