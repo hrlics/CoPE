@@ -33,12 +33,12 @@ With a simple yet effective soft clipping strategy, CoPE
 3️⃣ **Prevents Spectral Leakage** induced by hard frequency truncation, which otherwise leads to long-range oscillatory ringing in the attention scores across relative token distances and introduces spurious correlations.
 
 
-## ⚡ Download the Models
+## ⚡ Download the Models and Data
 
 All our models and data are released on Hugging Face, including **RoPE, HardClip, and CoPE** checkpoints (64k) obtained via continued pre-training and SFT, starting from Llama-3-8B (8k). [[Link]](https://huggingface.co/collections/haoranli-ml/cope)
 
 
-## 🛠️ Requirements
+<!-- ## 🛠️ Requirements
 1. Clone this repository and install `transformers==4.50.0` from source
 ```
 git clone https://github.com/hrlics/CoPE.git
@@ -51,20 +51,34 @@ tar -xzf v4.50.0.tar.gz
 ```
 CoPE/transformers-4.50.0/src/transformers/models/llama/modeling_llama.py
 ```
-with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`.
+with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. -->
 
 
-## 🚀 Train
+## 🚀 Training
 
-Our training code is based on [ProLong](https://github.com/princeton-nlp/ProLong).
+Our training code is based on [ProLong](https://github.com/princeton-nlp/ProLong). And we recommend having two seperate environments for training and evaluation to avoid dependency conflicts.
 
-
-
-Under `LLaMA-Factory/`, run the following script to start training:
+1. Setup training environment.
 ```
-train_hope.sh
+cd train/
+conda create -n cope_train python=3.10
+bash setup_env.sh
 ```
-Adjustments are made to `LLaMA-Factory/src/llamafactory/data/mm_plugin.py` to accomodate Qwen2-VL's training recipe.
+
+2. Download training data.
+```
+git clone https://huggingface.co/datasets/haoranli-ml/prolong-data-64K datasets/long-context-65536
+git clone https://huggingface.co/datasets/haoranli-ml/prolong-ultrachat-64K datasets/prolong-ultrachat-64K
+```
+
+3. Start training.
+```
+bash train_64k/sft.sh
+```
+We note that the default method is CoPE, while you can also easily switch to HardClip or vanilla RoPE by modifying `CoPE/train/training/modeling_flash_llama_cope.py`.
+
+
+
 
 ## 🔍 Evaluation
 
