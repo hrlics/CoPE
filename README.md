@@ -68,10 +68,7 @@ We primarily conduct evaluations on the [HELMET](https://github.com/princeton-nl
 
 1. Setup Eval Environment
 ```
-# install `transformers==4.50.0` from source
-cd CoPE
-wget https://github.com/huggingface/transformers/archive/refs/tags/v4.50.0.tar.gz
-tar -xzf v4.50.0.tar.gz
+bash setup_eval_env.sh
 ```
 
 2. Replace the code in
