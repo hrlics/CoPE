@@ -35,13 +35,8 @@ With a simple yet effective soft clipping strategy, CoPE
 
 ## ⚡ Download the Models
 
-All our models are released on Hugging Face, including **RoPE, HardClip, and CoPE** checkpoints (64k) obtained via continued pre-training and SFT, starting from Llama-3-8B (8k).
+All our models and data are released on Hugging Face, including **RoPE, HardClip, and CoPE** checkpoints (64k) obtained via continued pre-training and SFT, starting from Llama-3-8B (8k). [[Link]](https://huggingface.co/collections/haoranli-ml/cope)
 
-<p align="center">
-  <a href="https://huggingface.co/collections/haoranli-ml/cope">
-    <img src="https://img.shields.io/badge/%20Hugging%20Face-Model%20Collection-fcd022?style=for-the-badge&logo=huggingface&logoColor=000" />
-  </a>
-</p>
 
 ## 🛠️ Requirements
 1. Clone this repository and install `transformers==4.50.0` from source
@@ -61,7 +56,9 @@ with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`.
 
 ## 🚀 Train
 
-We utilize a subset of [LLaVA-Video-178K](https://huggingface.co/datasets/lmms-lab/LLaVA-Video-178K) as training data, which comprises 30k videos with durations under 2 minutes and 3k videos with durations between 2 to 3 minuts (~300k pairs).
+Our training code is based on [ProLong](https://github.com/princeton-nlp/ProLong).
+
+
 
 Under `LLaMA-Factory/`, run the following script to start training:
 ```
