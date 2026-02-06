@@ -80,7 +80,7 @@ with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. Note th
 
 ## 📖 Citation
 ```
-@article{li2025cope,
+@article{li2026cope,
   title={CoPE: Clipped RoPE as A Scalable Free Lunch for Long Context LLMs},
   author={Li, Haoran and Ren, Sucheng and Yuille, Alan and Wang, Feng},
   journal={arXiv preprint arXiv:2602.05258},
