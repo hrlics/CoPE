@@ -32,6 +32,16 @@ With a simple yet effective soft clipping strategy, CoPE
 3️⃣ **Prevents Spectral Leakage** induced by hard frequency truncation, which otherwise leads to long-range oscillatory ringing in the attention scores across relative token distances and introduces spurious correlations.
 
 
+## ⚡ Download the Models
+
+All our models are released on Hugging Face, including **RoPE, HardClip, and CoPE** checkpoints (64k) obtained via continued pre-training and SFT, starting from Llama-3-8B (8k).
+
+<p align="center">
+  <a href="https://huggingface.co/collections/haoranli-ml/cope">
+    <img src="https://img.shields.io/badge/%20Hugging%20Face-Model%20Collection-fcd022?style=for-the-badge&logo=huggingface&logoColor=000" />
+  </a>
+</p>
+
 ## 🛠️ Requirements
 1. Clone this repository and install `transformers==4.50.0` from source
 ```
