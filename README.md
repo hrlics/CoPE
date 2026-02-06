@@ -72,7 +72,8 @@ git clone https://huggingface.co/datasets/haoranli-ml/prolong-ultrachat-64K data
 
 3. Start training.
 ```
-bash train_64k/sft.sh
+bash train_64k.sh
+bash train_sft.sh
 ```
 We note that the default method is CoPE, while you can also easily switch to HardClip or vanilla RoPE by modifying `CoPE/train/training/modeling_flash_llama_cope.py`.
 
