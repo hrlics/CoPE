@@ -4,14 +4,13 @@
 <h5 align="center">
   
 [![Paper](https://img.shields.io/badge/CoPE_paper-2F4858?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.05258)
-[![Paper](https://img.shields.io/badge/HoPE_paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.20444)
 [![Hugging Face Collection](https://img.shields.io/badge/Checkpoints-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/haoranli-ml/cope)
 
 </h5>
 
 
 ## 📢 News
-- **\[02/05/2026\]** **CoPE** was released on [arXiv](https://arxiv.org/abs/2602.05258)! You can also check out our related work **[HoPE](https://arxiv.org/abs/2505.20444)** at NeurIPS 2025.
+- **\[02/05/2026\]** **CoPE** was released on [arXiv](https://arxiv.org/abs/2602.05258)!
 
 
 ## ✨  Overview
