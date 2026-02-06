@@ -3,17 +3,14 @@
 
 <h5 align="center">
   
-<!-- [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)]()  -->
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.05258)
 [![Hugging Face Collection](https://img.shields.io/badge/Checkpoints-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/collections/haoranli-ml/cope)
-<!-- [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=X&logoColor=white)](https://x.com/HaoranLi_/status/1994940409257365733?s=20) -->
-<!-- [![GitHub Stars](https://img.shields.io/github/stars/hrlics/HoPE?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=000000)](https://github.com/hrlics/HoPE) -->
-
 
 </h5>
 
 
 ## 📢 News
-- **\[02/XX/2026\]** CoPE was released on [arXiv](https://arxiv.org/abs/2505.20444)!
+- **\[02/05/2026\]** CoPE was released on [arXiv](https://arxiv.org/abs/2602.05258)!
 
 
 ## ✨  Overview
