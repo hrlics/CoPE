@@ -44,7 +44,6 @@ Our training code is based on [ProLong](https://github.com/princeton-nlp/ProLong
 1. Setup training environment.
 ```
 cd train/
-conda create -n cope_train python=3.10
 bash setup_env.sh
 ```
 
@@ -75,7 +74,7 @@ bash setup_eval_env.sh
 ```
 CoPE/transformers-4.50.0/src/transformers/models/llama/modeling_llama.py
 ```
-with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. Note that you have to modify the 
+with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. Note that you have to modify `LlamaRotaryEmbedding` in the modeling file to use `CoPE/RoPE/HardClip`. 
 
 
 

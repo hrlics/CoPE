@@ -1,3 +1,4 @@
+conda create -n cope_train python=3.10 -y
 conda activate cope_train
 pip install torch==2.4.1
 pip install -r requirements.txt
