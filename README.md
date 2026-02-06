@@ -37,22 +37,6 @@ With a simple yet effective soft clipping strategy, CoPE
 All our models and data are released on Hugging Face, including **RoPE, HardClip, and CoPE** checkpoints (64k) obtained via continued pre-training and SFT, starting from Llama-3-8B (8k). [[Link]](https://huggingface.co/collections/haoranli-ml/cope)
 
 
-<!-- ## 🛠️ Requirements
-1. Clone this repository and install `transformers==4.50.0` from source
-```
-git clone https://github.com/hrlics/CoPE.git
-cd CoPE
-wget https://github.com/huggingface/transformers/archive/refs/tags/v4.50.0.tar.gz
-tar -xzf v4.50.0.tar.gz
-```
-
-2. Replace the code in
-```
-CoPE/transformers-4.50.0/src/transformers/models/llama/modeling_llama.py
-```
-with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. -->
-
-
 ## 🚀 Training
 
 Our training code is based on [ProLong](https://github.com/princeton-nlp/ProLong). And we recommend having two seperate environments for training and evaluation to avoid dependency conflicts.
@@ -78,49 +62,32 @@ bash train_sft.sh
 We note that the default method in training is CoPE, while you can easily switch to HardClip or vanilla RoPE by modifying `CoPE/train/training/modeling_flash_llama_cope.py`.
 
 
-
-
 ## 🔍 Evaluation
 
-We primarily conduct evaluations on the [HELMET](https://github.com/princeton-nlp/HELMET) benchmark given its diverse collection of real-world tasks, while also including results on synthetic benchmarks such as [RULER](https://github.com/NVIDIA/RULER) and [InfiniteBench](https://github.com/OpenBMB/InfiniteBench).
+We primarily conduct evaluations on the [HELMET](https://github.com/princeton-nlp/HELMET) benchmark given its diverse collection of real-world tasks, while also including results on synthetic benchmarks such as [RULER](https://github.com/NVIDIA/RULER) and [InfiniteBench](https://github.com/OpenBMB/InfiniteBench). For standard short-context benchmark evaluations, we utilze [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
-
-
-
-#### Long Video Understanding
-
-Evaluations on long video understanding are based on [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval). The first step is to install relevant dependencies: 
+1. Setup Eval Environment
 ```
-cd lmms-eval
-pip install -e .
+# install `transformers==4.50.0` from source
+cd CoPE
+wget https://github.com/huggingface/transformers/archive/refs/tags/v4.50.0.tar.gz
+tar -xzf v4.50.0.tar.gz
 ```
 
-Then, run the following script to start evaluations on MLVU, LongVideoBench, and Video-MME:
+2. Replace the code in
 ```
-bash eval_LVU.sh
+CoPE/transformers-4.50.0/src/transformers/models/llama/modeling_llama.py
 ```
+with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`. Note that you have to modify the 
 
-Adjustments are made to `lmms-eval/lmms_eval/models/qwen2_vl.py` to accomodate our evaluation configs.
 
-#### Long Video Retrieval
-
-Under `vision_niah/`, run the following script to produce haystack and needle embeddings for long video retrieval:
-```
-bash produce_haystack_and_needle_embedding.sh
-```
-
-Now, we can run evaluations:
-```
-bash eval.sh
-```
 
 ## 📖 Citation
-If you find our work helpful, please consider citing 📝 and giving us a star ⭐
 ```
-@article{li2025hope,
-  title={HoPE: Hybrid of Position Embedding for Length Generalization in Vision-Language Models},
-  author={Li, Haoran and Qin, Yingjie and Ou, Baoyuan and Xu, Lai and Xu, Ruiwen},
-  journal={arXiv preprint arXiv:2505.20444},
-  year={2025}
+@article{li2025cope,
+  title={CoPE: Clipped RoPE as A Scalable Free Lunch for Long Context LLMs},
+  author={Li, Haoran and Ren, Sucheng and Yuille, Alan and Wang, Feng},
+  journal={arXiv preprint arXiv:2602.05258},
+  year={2026}
 }
-```
+``` 
