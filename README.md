@@ -82,6 +82,11 @@ We note that the default method in training is CoPE, while you can easily switch
 
 ## 🔍 Evaluation
 
+We primarily conduct evaluations on the [HELMET](https://github.com/princeton-nlp/HELMET) benchmark given its diverse collection of real-world tasks, while also including results on synthetic benchmarks such as [RULER](https://github.com/NVIDIA/RULER) and [InfiniteBench](https://github.com/OpenBMB/InfiniteBench).
+
+
+
+
 #### Long Video Understanding
 
 Evaluations on long video understanding are based on [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval). The first step is to install relevant dependencies: 
