@@ -51,16 +51,11 @@ wget https://github.com/huggingface/transformers/archive/refs/tags/v4.50.0.tar.g
 tar -xzf v4.50.0.tar.gz
 ```
 
-2. Install required packages
+2. Replace the code in
 ```
-bash setup_env.sh
+CoPE/transformers-4.50.0/src/transformers/models/llama/modeling_llama.py
 ```
-
-3. Replace the code in
-```
-HoPE/transformers-4.45.2/src/transformers/models/qwen2_vl/modeling_qwen2_vl.py
-```
-with `HoPE/modeling_hope.py`. The differences are marked with `# MODIFIED`.
+with `CoPE/modeling_cope.py`. And rename it back to `modeling_llama.py`.
 
 
 ## 🚀 Train
