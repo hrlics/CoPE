@@ -10,7 +10,7 @@
 
 
 ## 📢 News
-- **\[02/05/2026\]** CoPE was released on [arXiv](https://arxiv.org/abs/2602.05258)!
+- **\[02/05/2026\]** **CoPE** was released on [arXiv](https://arxiv.org/abs/2602.05258)! You can also check out our related work **[HoPE](https://arxiv.org/abs/2505.20444)** at NeurIPS 2025.
 
 
 ## ✨  Overview
