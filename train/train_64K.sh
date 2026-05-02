@@ -31,7 +31,7 @@ domains_name=ProLong64KMix
 bsz=${BSZ:-256} # * 64k (seq len) *4 = 16M
 seq=${SEQ:-4} # per-device batch size
 lr=${LR:-1e-5}
-steps=${STEPS:-5000}
+steps=${STEPS:-1250}
 save_steps=${SAVE:-125}
 warmup=${WARMUP:-0.1}
 suffix=${SUFFIX:-""} # for model saving name
